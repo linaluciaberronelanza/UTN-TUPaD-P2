@@ -1,0 +1,445 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>10</x><y>2730</y><w>170</w><h>120</h></coordinates><panel_attributes>Bateria
+--
+-modelo: String;
+-capacidad: Int;
+--
++ Bateria(): 
++setModelo(String): void;
++getModelo(): String;
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>280</x><y>2990</y><w>380</w><h>200</h></coordinates><panel_attributes>Pasaporte
+--
+- numero: String
+-fechasEmision: String
+-Foto: foto;
+-Titular: titular;
+--
++ Pasaporte(String numero, String fechaEmision, Foto foto): 
++getNumero() : String;
++getFechaEmision() : String;
++ getFoto() : Foto
++getTitular(): Titular
++setTitular(Titular titular): void;</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>750</x><y>2990</y><w>280</w><h>190</h></coordinates><panel_attributes>Titular
+--
+-nombre: String
+-dni: int;
+-Pasaporte: pasaporte;
+--
++Titular(String nombre, int dni);
++getNombre() : String;
++getDni() : int;
++getPasaporte(): Pasaporte
++setPasaporte(Pasaporte pasaporte): void
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>200</x><y>3060</y><w>100</w><h>50</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+
+m2=1</panel_attributes><additional_attributes>80;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>650</x><y>3060</y><w>120</w><h>50</h></coordinates><panel_attributes>lt=-
+m1=1
+m2=1
+</panel_attributes><additional_attributes>10;20;100;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>40</x><y>2990</y><w>170</w><h>190</h></coordinates><panel_attributes>Foto
+--
+-imagen: String;
+-formato: String;
+--
++ Foto(String imagen): 
++setImagen(String): void;
++getImagen(): String;
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>260</x><y>2730</y><w>410</w><h>220</h></coordinates><panel_attributes>Celular
+--
+- imei: String
+-marca: String
+-modelo: String
+-Bateria: bateria;
+-Usuario: usuario;
+--
++ Pasaporte(String imei, String marca, String modelo, Bateria bateria): 
++getImei() : String;
++getMarca() : String;
++getModelo() : String;
++ getBateria() : Bateria
++getUusario(): Usuario;
++setUsuario(Usuario usuario): void;</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>750</x><y>2730</y><w>220</w><h>190</h></coordinates><panel_attributes>Usuario
+--
+-nombre: String
+-dni: int;
+-Celular: celular;
+--
++Usuario(String nombre, int dni);
++getNombre() : String;
++getDni() : int;
++getCelular(): Celular
++setCelular(Celular celular): void
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>660</x><y>2820</y><w>110</w><h>50</h></coordinates><panel_attributes>lt=-
+m1=1
+m2=1
+</panel_attributes><additional_attributes>10;20;90;20</additional_attributes></element><element><id>Relation</id><coordinates><x>170</x><y>2820</y><w>110</w><h>40</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m2= 1</panel_attributes><additional_attributes>90;10;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>2470</y><w>250</w><h>120</h></coordinates><panel_attributes>Autor
+--
+-nombre: String;
+-nacionalidad: String;
+--
++ Autor(String nombre, String nacionalidad): 
++getNombre(): String;
++getNacionalidad(): String;</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>330</x><y>2470</y><w>370</w><h>170</h></coordinates><panel_attributes>Libro
+--
+-titulo: String
+-isbn: String
+-Autor: autor;
+-Editorial: editorial;
+--
++ Libro(String titulo, String isbn, Autor autor, Editorial editorial): 
++getTitulo() : String;
++getIsbn() : String;
++getAutor() : autor;
++getEditorial() : editorial;</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>820</x><y>2470</y><w>260</w><h>110</h></coordinates><panel_attributes>Editorial
+--
+-nombre: String
+-direccion: String;
+--
++Editorial(String nombre, String direccion);
++getNombre() : String;
++getDireccion() : String;
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>240</x><y>2530</y><w>110</w><h>40</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m2= 1</panel_attributes><additional_attributes>90;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>690</x><y>2540</y><w>150</w><h>40</h></coordinates><panel_attributes>lt=&lt;-
+m1=1</panel_attributes><additional_attributes>130;10;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>840</x><y>2230</y><w>270</w><h>170</h></coordinates><panel_attributes>Cliente
+--
+-nombre: String
+-dni: int;
+-TarjetaDeCredito: tarjeta;
+--
++Cliente(String nombre, int dni);
++getNombre() : String;
++getDni() : int;
++getTarjeta(): TarjetaDeCredito
++setTarjeta(TarjetaDeCredito tarjeta): void;
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>280</x><y>2220</y><w>450</w><h>190</h></coordinates><panel_attributes>Tarjeta de Credito
+--
+-numero: String;
+-fechaVencimiento: String;
+-Banco: banco;
+-Cliente: cliente;
+--
++ TarjetaDeCredito(String numero, String fechaVencimiento, Banco banco): 
++getNumero() : String;
++getFechaVencimiento() : String;
++ getBanco() : Banco
++getCliente(): Cliente;
++setCliente(Cliente cliente): void;</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>10</x><y>2220</y><w>200</w><h>110</h></coordinates><panel_attributes>Banco
+--
+-nombre: String
+-cuit: int;
+--
++Banco(String nombre, int cuit);
++getNombre() : String;
++getCuit() : int;
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>720</x><y>2270</y><w>140</w><h>50</h></coordinates><panel_attributes>lt=-
+m1=1
+m2=1
+</panel_attributes><additional_attributes>10;20;120;20</additional_attributes></element><element><id>Relation</id><coordinates><x>200</x><y>2260</y><w>100</w><h>40</h></coordinates><panel_attributes>lt=&lt;-
+m1=1</panel_attributes><additional_attributes>10;10;80;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>840</x><y>1990</y><w>320</w><h>190</h></coordinates><panel_attributes>Propietario
+--
+-nombre: String
+-dni: int;
+-Computadora: computadora;
+--
++Propietario(String nombre, int dni);
++getNombre() : String;
++getDni() : int;
++setNombre() : void;
++setDni() : void;
++getComputadora(): Computadora
++setComputadora(Computadora computadora): void;
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>280</x><y>1990</y><w>450</w><h>220</h></coordinates><panel_attributes>Computadora
+--
+-marca: String;
+-numeroSerie: String;
+-PlacaMadre : placaMadre;
+-Propietario: propietario;
+--
++ Computadora(String marca, String numeroSerie, PlacaMadre placaMadre): 
++getMarca() : String;
++setMarca(String marca): void;
++getNumeroSerie() : String;
++setNumeroSerie(String numeroSerie): void;
++getPlacaMadre() : PlacaMadre
++getPropietario(): Propietario;
++setPropietario(Propietario propietario): void;</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>30</x><y>1990</y><w>170</w><h>120</h></coordinates><panel_attributes>PlacaMadre
+--
+-modelo: String;
+-chipset: String;
+--
++ PlacaMadre(String modelo): 
++setModelo(String): void;
++getModelo(): String;
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>190</x><y>2050</y><w>110</w><h>50</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+
+m2=1</panel_attributes><additional_attributes>90;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>720</x><y>2080</y><w>140</w><h>50</h></coordinates><panel_attributes>lt=-
+m1=1
+m2=1
+</panel_attributes><additional_attributes>10;20;120;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>20</x><y>1750</y><w>250</w><h>170</h></coordinates><panel_attributes>Mesa
+--
+-numero: int;
+-capacidad: int;
+--
++ Mesa(int numero, int capacidad): 
++getNumero(): int;
++getCapacidad(): int;
+(tambien incluye los setters)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>350</x><y>1750</y><w>410</w><h>220</h></coordinates><panel_attributes>Reserva
+--
+-fecha: String
+-hora: String
+-Mesa: mesa;
+-Comensal: comensal ;
+--
++ Reserva(String fecha, String hora, Mesa mesa, Comensal comensal): 
++getFecha() : String;
++getHora() : String;
+(tambien se incluyen estos setters)
++getMesa() : mesa;
++setMesa(Mesa mesa): void;
++getComensal() :comensal;
++setComensal (Comensal comensal): void;</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>870</x><y>1750</y><w>220</w><h>150</h></coordinates><panel_attributes>Comensal
+--
+-nombre: String
+-telefono: int;
+--
++Comensal(String nombre, int telefono);
++getNombre() : String;
++getTelefono() : int;
++setNombre(String nombre) : void;
++setTelefono(int telefono) : void;</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>260</x><y>1800</y><w>110</w><h>40</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m2= 1</panel_attributes><additional_attributes>90;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>750</x><y>1790</y><w>140</w><h>40</h></coordinates><panel_attributes>lt=&lt;-
+m1=1</panel_attributes><additional_attributes>120;10;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>300</x><y>1530</y><w>450</w><h>200</h></coordinates><panel_attributes>Vehiculo
+--
+-patente: String;
+-modelo: String;
+-Motor: motor;
+-Conductor: conductor;
+--
++ Vehiculo(String patente, String modelo, Motor motor): 
++getPatente() : String;
++getModelo() : String;
++ getMotor() : Motor;
++ setMotor(Motor motor) : void;
++getConductor(): Conductor;
++setConductor(Conductor conductor): void;</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>10</x><y>1530</y><w>230</w><h>130</h></coordinates><panel_attributes>Motor
+--
+-tipo: String
+-numeroSerie: int;
+--
++Motor(String tipo, int numeroSerie);
++getTipo() : String;
++getNumeroSerie() : int;
+(en el codigo estan los setters tambien)
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>230</x><y>1560</y><w>90</w><h>40</h></coordinates><panel_attributes>lt=&lt;-
+m1=1</panel_attributes><additional_attributes>10;10;70;10</additional_attributes></element><element><id>Relation</id><coordinates><x>740</x><y>1580</y><w>120</w><h>50</h></coordinates><panel_attributes>lt=-
+m1=1
+m2=1
+</panel_attributes><additional_attributes>10;20;100;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>840</x><y>1530</y><w>270</w><h>200</h></coordinates><panel_attributes>Conductor
+--
+-nombre: String
+-licencia: int;
+-Vehiculo: vehiculo;
+--
++Conductor(String nombre, int licencia);
++getNombre() : String;
++getLicencia() : int;
+(en el codigo estan los setters tambien)
++getVehiculo(): Vehiculo
++setVehiculo(Vehiculo vehiculo): void;
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>1300</y><w>260</w><h>140</h></coordinates><panel_attributes>Documento
+--
+-titulo: String;
+-contenido: String;
+--
++ Documento(String titulo, String contenido): 
++setTitulo(String): void;
++getTitulo(): String;
++setContenido(String): void;
++getContenido(): String;
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>330</x><y>1300</y><w>450</w><h>210</h></coordinates><panel_attributes>Firma Digital
+--
+-codigoHash: String;
+-fecha: String;
+-Documento: documento;
+-Profesional : profesional;
+--
++ FirmaDigital(String codigoHash, String fecha, Documento documento): 
++getCodigoHash() : String;
++setCodigoHash(String codigoHash): void;
++getFecha() : String;
++setFecha(String fecha): void;
++getDocumento() : Documento
++getProfesional(): Propietario;
++setProfesional(Profesional profesional): void;</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>840</x><y>1300</y><w>250</w><h>170</h></coordinates><panel_attributes>Profesional
+--
+-nombre: String
+-email: String
+--
++ Profesional(String nombre, String email): 
++setNombre(String nombre): void;
++getNombre(): String;
++setEmail(String email): void;
++getEmail(): String;</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>770</x><y>1360</y><w>90</w><h>40</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m2= 1</panel_attributes><additional_attributes>10;10;70;10</additional_attributes></element><element><id>Relation</id><coordinates><x>250</x><y>1340</y><w>100</w><h>50</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+
+m2=1</panel_attributes><additional_attributes>80;20;10;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>10</x><y>1070</y><w>260</w><h>130</h></coordinates><panel_attributes>Paciente
+--
+-nombre: String;
+-obraSocial: String;
+--
++Paciente(String nombre, String obraSocial);
++getNombre() : String;
++getObraSocial() : String;
+(en el codigo estan los setters tambien)
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>840</x><y>1070</y><w>270</w><h>130</h></coordinates><panel_attributes>Doctor
+--
+-nombre: String;
+-especialidad: String;
+--
++Doctor(String nombre, String especialidad);
++getNombre() : String;
++getEspecialidad() : String;
+(en el codigo estan los setters tambien)
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>330</x><y>1070</y><w>450</w><h>200</h></coordinates><panel_attributes>CitaMedica
+--
+-fecha: String
+-hora: String
+-Paciente: paciente;
+-Doctor: doctor;
+--
++ CitaMedica(String fecha, String hora, Paciente paciente, Doctor doctor): 
++getfecha() : String;
++gethora() : String;
++ getPaciente() : Paciente;
++ setPaciente(Paciente paciente) : void;
++getDoctor(): Doctor;
++setDoctor(Doctor doctor): void;</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>260</x><y>1110</y><w>90</w><h>40</h></coordinates><panel_attributes>lt=&lt;-
+m1=1</panel_attributes><additional_attributes>10;10;70;10</additional_attributes></element><element><id>Relation</id><coordinates><x>770</x><y>1100</y><w>90</w><h>40</h></coordinates><panel_attributes>lt=&lt;-
+m1=1</panel_attributes><additional_attributes>70;10;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>840</y><w>290</w><h>150</h></coordinates><panel_attributes>ClaveSeguridad
+--
+-codigo: String;
+-ultimaModificacion: String;
+--
++ ClaveSeguridad(String codigo, String ultimaModificacion): 
++setCodigo(String): void;
++getCodigo(): String;
++setUltimaModificacion(String ultimaModificacion): void;
++getUltimaModificacion(): String;</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>350</x><y>840</y><w>380</w><h>200</h></coordinates><panel_attributes>CuentaBancaria
+--
+- cbu: int;
+-saldo: int;
+-ClaveSeguridad: clave;
+-Poseedor: poseedor;
+--
++ CuentaBancaria(int cbu, int saldo, String codigoClave, String fechaModificacion): 
++getCbu() : int;
++getSaldo() : int;
++getClave() : ClaveSeguridad
++setClave(ClaveSeguridad clave): void
++getPoseedor(): Poseedor
++setPoseedor(Poseedor poseedor): void;</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>800</x><y>850</y><w>350</w><h>190</h></coordinates><panel_attributes>Poseedor
+--
+-nombre: String
+-dni: int;
+-CuentaBancaria: cuenta;
+--
++Poseedor(String nombre, int dni);
++getNombre() : String;
++getDni() : int;
++getCuenta(): CuentaBancaria;
++setCuenta(CuentaBancaria cuenta): void;
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>720</x><y>890</y><w>100</w><h>50</h></coordinates><panel_attributes>lt=-
+m1=1
+m2=1
+</panel_attributes><additional_attributes>10;20;80;20</additional_attributes></element><element><id>Relation</id><coordinates><x>280</x><y>900</y><w>90</w><h>50</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+
+m2=1</panel_attributes><additional_attributes>70;20;10;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>910</x><y>600</y><w>230</w><h>130</h></coordinates><panel_attributes>Artista
+--
+-nombre: String;
+-genero: String;
+--
++Artista(String nombre, String genero);
++getNombre() : String;
++getGenero() : String;
+(en el codigo estan los setters tambien)
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>380</x><y>600</y><w>450</w><h>200</h></coordinates><panel_attributes>Cancion
+--
+-titulo: String
+-Artista: artista;
+--
++Cancion(String titulo, Artista artista): 
++getTitulo() : String;
++setTitulo(String titulo) : void;
++getArtistar(): Artista;
++setArtista(Artista artista): void;
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>30</x><y>640</y><w>220</w><h>50</h></coordinates><panel_attributes>Reproductor
+--
++ reproducir(Cancion cancion): void;</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>820</x><y>650</y><w>110</w><h>40</h></coordinates><panel_attributes>lt=&lt;-
+m1=1</panel_attributes><additional_attributes>90;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>240</x><y>650</y><w>160</w><h>50</h></coordinates><panel_attributes>lt=&lt;.
+
+&lt;&lt; call &gt;&gt;</panel_attributes><additional_attributes>140;20;10;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>20</x><y>360</y><w>220</w><h>50</h></coordinates><panel_attributes>Calculadora
+--
++calcular(Impuesto impuesto): void;</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>420</x><y>350</y><w>350</w><h>140</h></coordinates><panel_attributes>Impuesto
+--
+-monto: int
+-Contribuyente: contribuyente;
+--
++Impuesto(int monto, Contribuyente contribuyente): 
++getMonto() : int;
++getContribuyente(): Contribuyente;
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>910</x><y>350</y><w>230</w><h>130</h></coordinates><panel_attributes>Contribuyente
+--
+-nombre: String;
+-cuil: int;
+--
++Contribuyente(String nombre, int cuil);
++getNombre() : String;
++getCuil() : int;
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>230</x><y>370</y><w>210</w><h>50</h></coordinates><panel_attributes>lt=&lt;.
+
+&lt;&lt; call &gt;&gt;</panel_attributes><additional_attributes>190;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>760</x><y>390</y><w>170</w><h>40</h></coordinates><panel_attributes>lt=&lt;-
+m1=1</panel_attributes><additional_attributes>150;10;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>200</y><w>330</w><h>50</h></coordinates><panel_attributes>GeneradorQR
+--
++generar(String valor, Programador programador): void;</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>420</x><y>170</y><w>350</w><h>140</h></coordinates><panel_attributes>CodigoQR
+--
+-valor: String
+-Programador: programador;
+--
++CodigoQR(String valor, Programador programador): 
++getValor() : String;
++getProgramador(): Programador;
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>910</x><y>170</y><w>230</w><h>130</h></coordinates><panel_attributes>Programador
+--
+-nombre: String;
+-email: String;
+--
++Contribuyente(String nombre, String email);
++getNombre() : String;
++getEmail() : String;
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>320</x><y>210</y><w>120</w><h>50</h></coordinates><panel_attributes>lt=&lt;.
+
+&lt;&lt; create &gt;&gt;</panel_attributes><additional_attributes>100;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>760</x><y>220</y><w>170</w><h>40</h></coordinates><panel_attributes>lt=&lt;-
+m1=1</panel_attributes><additional_attributes>150;10;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>30</y><w>330</w><h>50</h></coordinates><panel_attributes>EditorVideo
+--
++exportar(String formato, Proyecto proyecto): void;</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>320</x><y>40</y><w>120</w><h>50</h></coordinates><panel_attributes>lt=&lt;.
+
+&lt;&lt; create &gt;&gt;</panel_attributes><additional_attributes>100;20;10;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>420</x><y>0</y><w>350</w><h>140</h></coordinates><panel_attributes>Render
+--
+-formato: String
+-Proyecto: proyecto;
+--
++Render(String formato, Proyecto proyecto): 
++getFormato() : String;
++getProyecto(): Proyecto;
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>760</x><y>50</y><w>130</w><h>40</h></coordinates><panel_attributes>lt=&lt;-
+m1=1</panel_attributes><additional_attributes>110;10;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>870</x><y>0</y><w>270</w><h>130</h></coordinates><panel_attributes>Proyecto
+--
+-nombre: String;
+-duracionMin: int;
+--
++Contribuyente(String nombre, int duracionMin);
++getNombre() : String;
++getDuracionMin() : int;
+
+</panel_attributes><additional_attributes></additional_attributes></element></diagram>
